@@ -1,0 +1,35 @@
+---
+### Application specific setup
+app:
+  name: project-template
+  port: 1323
+
+logger:
+  global:
+    level: debug
+    reportCaller: true
+    infra: gcp
+
+### Database connection
+db:
+  profile:
+    database: test
+    host: mysql.default
+    port: 3306
+    username: root
+    password: password
+
+### Integration
+integration:
+  gameProfile:
+    name: GameProfile
+    baseUrl: http://localhost:1324
+    apis:
+      createGameProfile:
+        name: CreateGameProfile
+        method: POST
+        uri: /v1
+      getGameProfile:
+        name: GetGameProfile
+        method: GET
+        uri: /v1

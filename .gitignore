@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+vendor
+*.test
+__debug_bin
+*.out
+.DS_Store
+kustomize/
